@@ -17,7 +17,7 @@ javac promc2stdhep.java
 ```
 java promc2lcio   file.promc file.slcio
 java promc2stdhep file.promc file.stdhep
-
+```
 
 Here is a full example:
 
@@ -27,7 +27,7 @@ Get a ProMC file from the HepSim:
 wget https://mc.hep.anl.gov/asc/hepsim/events/mumu/250gev/pythia8_higgs_bbar//gev250mumu_higgs_bbar_001.promc
 ```
 
-This file contains events with Higgs decaying to b-jets at e+e- collider at 250 GeV. Now you can explore the events in this file as :
+This file contains Monte Carlo events with Higgs decaying to b-jets at e+e- collider at 250 GeV. Now you can explore the events in this file as :
 
 ```
 java -jar lib/browser_promc.jar gev250mumu_higgs_bbar_001.promc
