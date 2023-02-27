@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# setup java
+source /share/sl6/set_asc.sh
+
+# classpath
+source ./setup.sh
+
+# setup Jas4pp
+source /share/sl6/jas4pp/setup.sh
+
+javac promc2lcio.java
+
+FILE="gev250ee_higgs_ZZ4e_001"
+# FILE="tev100_pythia8_higgs_zz_4l_001"
+# FILE="pythia1000tev_pp_qcdpt300_001"
+
+
+rm $FILE.slcio
+java promc2lcio $FILE.promc $FILE.slcio
+java LCTExpanded $FILE.slcio 40
+ 
